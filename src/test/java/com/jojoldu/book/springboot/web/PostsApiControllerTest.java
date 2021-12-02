@@ -72,7 +72,7 @@ public class PostsApiControllerTest {
 
         HttpEntity<PostsUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
 
-        ResponseEntity<Long> responseEntity =  restTemplate.exchange(url, HttpMethod.POST, requestEntity, Long.class);
+        ResponseEntity<Long> responseEntity =  restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Long.class);
 
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
 
@@ -84,4 +84,5 @@ public class PostsApiControllerTest {
 
         assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
     }
+
 }

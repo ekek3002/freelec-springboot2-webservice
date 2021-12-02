@@ -13,7 +13,7 @@ public class PostsApiController {
 
     private final PostsService postsService;
 
-    @PostMapping("/api/v1/posts/{id}")
+    @PutMapping("/api/v1/posts/{id}")
     public Long update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto requestDto){return postsService.update(id, requestDto);}
 
     @GetMapping("/api/v1/posts/{id}")
