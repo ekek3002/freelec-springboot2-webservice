@@ -69,6 +69,4 @@ var main = {
     }
 };
 
-
-
 main.init();
